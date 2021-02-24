@@ -52,7 +52,8 @@ export default function Countdown() {
 
       {hasFinished ? (
         <button type="button" disabled className={styles.countdownButton}>
-          Ciclo encerrado
+          Ciclo encerrado ✔️
+          <img src="/icons/" alt="" />
         </button>
       ) : (
         <>
