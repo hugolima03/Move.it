@@ -1,3 +1,5 @@
+/* eslint-disable import/extensions */
+/* eslint-disable import/no-unresolved */
 import {
   createContext,
   ReactNode,
@@ -22,6 +24,7 @@ interface CountdownProviderProps {
 
 export const CountdownContext = createContext({} as CoundownContextData);
 
+// eslint-disable-next-line no-undef
 let countdownTimeout: NodeJS.Timeout;
 
 export function CountdownProvider({ children }: CountdownProviderProps) {
