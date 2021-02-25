@@ -1,4 +1,10 @@
-import { createContext, ReactNode, useEffect, useState } from 'react';
+/* eslint-disable no-new */
+import {
+  createContext,
+  ReactNode,
+  useEffect,
+  useState,
+} from 'react';
 
 import challenges from '../../challenges.json';
 
@@ -33,7 +39,7 @@ export function ChallengesProvider({ children }: ChallengesProviderProps) {
 
   const [activeChallenge, setActiveChallenge] = useState(null);
 
-  const experienceToNextlevel = Math.pow((level + 1) * 4, 2);
+  const experienceToNextlevel = ((level + 1) * 4) ** 2;
 
   useEffect(() => {
     Notification.requestPermission();
@@ -49,6 +55,8 @@ export function ChallengesProvider({ children }: ChallengesProviderProps) {
     const challenge = challenges[randomChanllengeIndex];
 
     setActiveChallenge(challenge);
+
+    new Audio('/notification.mp3').play();
 
     if (Notification.permission === 'granted') {
       new Notification('Novo desafio⏰', {
