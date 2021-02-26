@@ -8,7 +8,7 @@ export default function Profile() {
   return (
     <div className={styles.profileContainer}>
       <img
-        src="https://pbs.twimg.com/profile_images/1359656352100937728/_7Wu7Bll_400x400.jpg"
+        src="/ProfileIcon.png"
         alt="ProfileImg"
       />
       <div>
